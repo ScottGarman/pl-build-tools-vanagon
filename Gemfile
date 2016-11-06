@@ -10,7 +10,8 @@ def vanagon_location_for(place)
   end
 end
 
-gem 'vanagon', *vanagon_location_for(ENV['VANAGON_LOCATION'] || 'git@github.com:puppetlabs/vanagon#master')
+#gem 'vanagon', *vanagon_location_for(ENV['VANAGON_LOCATION'] || 'git@github.com:puppetlabs/vanagon#master')
+gem 'vanagon', :github => 'ScottGarman/vanagon', :branch => 'vanagon-30'
 gem 'packaging', '~> 0.4.3', :github => 'puppetlabs/packaging', :branch => 'master'
 gem 'json'
 gem 'rake'
