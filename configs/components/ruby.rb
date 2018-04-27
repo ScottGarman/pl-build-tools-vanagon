@@ -1,9 +1,7 @@
 component "ruby" do |pkg, settings, platform|
-  pkg.version "2.1.9"
-  pkg.md5sum "d9d2109d3827789344cc3aceb8e1d697"
+  pkg.version "2.4.4"
+  pkg.md5sum "d50e00ccc1c9cf450f837b92d3ed3e88"
   pkg.url "#{settings[:buildsources_url]}/ruby-#{pkg.get_version}.tar.gz"
-
-  pkg.apply_patch "resources/patches/ruby/libyaml_cve-2014-9130.patch"
 
   # This is needed for date_core to correctly compile on solaris 10. Breaks gem installations.
   pkg.environment "PATH" => "/usr/sfw/bin:/usr/ccs/bin:$$PATH"
@@ -40,4 +38,3 @@ component "ruby" do |pkg, settings, platform|
     "#{platform[:make]} -j$(shell expr $(shell #{platform[:num_cores]}) + 1) install"
   end
 end
-

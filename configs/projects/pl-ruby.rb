@@ -2,13 +2,13 @@ project "pl-ruby" do |proj|
   # Project level settings our components will care about
   instance_eval File.read('configs/projects/pl-build-tools.rb')
 
-  proj.description "Puppet Labs Ruby used for cross-compiling"
+  proj.description "Puppet, Inc. Ruby used for cross-compiling"
 
   proj.license "2 Clause BSD"
   proj.vendor "Puppet Labs <info@puppetlabs.com>"
   proj.homepage "https://www.puppetlabs.com"
-  proj.version "2.1.9"
-  proj.release "4"
+  proj.version "2.4.4"
+  proj.release "1"
 
   # Platform specific - these flags do not work on AIX
   unless platform.is_aix?
